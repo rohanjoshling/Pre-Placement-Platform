@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from models.user import User
 
-def create_user(db: Session, user):
-    db_user = User( name=user.name, email=user.email, password=user.password)
+def create_user(db: Session, user:User, hashed_password: str):
+    db_user = User( name=user.name, email=user.email, password=hashed_password)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
