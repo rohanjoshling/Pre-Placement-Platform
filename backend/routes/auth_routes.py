@@ -5,6 +5,7 @@ from core.security import get_password_hash, verify_password
 from CRUD import user_crud
 from schemas.user_schema import UserBase , UserResponse , UserLogin
 from core.jwt_handler import create_access_token
+
 router = APIRouter()
 
 @router.post("/register", response_model=UserResponse)
