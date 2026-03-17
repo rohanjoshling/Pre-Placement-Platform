@@ -12,4 +12,4 @@ class UserLogin(BaseModel):
 class UserResponse(BaseModel):
     id : int = Field(gt=0)
     email : EmailStr
-    name : str = Field(min_length=3)
+    name : str = Field(min_length=3)      
