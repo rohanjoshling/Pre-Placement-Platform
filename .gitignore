@@ -1,6 +1,11 @@
 .gitignore
-# Virtual Environment
+# Virtual Environment (Mac)
 virtualenv/
+venv/
+env/
+
+# Virtual Environment (windows)
+virtual_env/
 venv/
 env/
 
