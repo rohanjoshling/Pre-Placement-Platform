@@ -3,7 +3,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Questions from "./pages/Questions";
 import QuestionDetail from "./pages/QuestionsDetail";
-import Navbar from "./components/NaveBar";
+import Dashboard from "./pages/DashBoard";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
@@ -13,8 +14,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
-        <Route path="/questions" element={<Questions />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/questions/company/:company" element={<Questions />} />
         <Route path="/questions/:id" element={<QuestionDetail />} />
       </Routes>
     </BrowserRouter>

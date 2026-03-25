@@ -7,16 +7,44 @@
   align-items: center;
 }
 
-.navbar h2 {
+/* Logo */
+.logo {
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Welcome text */
+.welcome {
+  margin: 0;
+  font-size: 20px;
+  /* font-weight: bol; */
+  color: #ccc;
+}
+
+/* Logout button */
 .navbar button {
   background-color: #2563eb;
+  font-weight: bold;
   border: none;
   padding: 8px 14px;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.navbar button:hover {
+  background-color: #1d4ed8;
+}
+.navbar button:active
+{
+  background-color: #516aad;
 }

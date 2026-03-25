@@ -23,8 +23,9 @@ function Login() {
 
     loginUser(form)
       .then(res => {
-        localStorage.setItem("token", res.data.access_token);
-        navigate("/questions");
+         localStorage.setItem("token", res.data.access_token);
+      localStorage.setItem("user", form.email);
+      navigate("/dashboard")
       })
       .catch(err => {
         alert("Login failed");
