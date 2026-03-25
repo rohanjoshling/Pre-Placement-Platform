@@ -5,6 +5,7 @@ import Questions from "./pages/Questions";
 import QuestionDetail from "./pages/QuestionsDetail";
 import Companies from "./pages/Companies"
 import Navbar from "./components/Navbar";
+import DashBoard from "./pages/DashBoard";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/Companies" element={<Companies/>} />
+        <Route path="/dashboard" element={<DashBoard/>} />
         <Route path="/questions/company/:company" element={<Questions />} />
         <Route path="/questions/:id" element={<QuestionDetail />} />
       </Routes>
