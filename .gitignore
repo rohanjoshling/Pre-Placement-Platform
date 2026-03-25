@@ -60,3 +60,4 @@ logs/
 # 🧪 OPTIONAL (BUILD / CACHE)
 # ==============================
 *.cache
+/frontend

@@ -1,50 +1,90 @@
 .navbar {
-  background-color: #011027f1;
-  color: white;
-  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #0b1c2c;
+  /* padding: 12px 12px; */
+  color: white;
+  gap: 10px;
 }
 
-/* Logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 .logo {
-  margin: 0;
-  font-size: 25px;
-  font-weight: bold;
+  cursor: pointer;
+  color: #4da6ff;
+  margin-left: 10px;
 }
 
-/* Right section */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links p {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-links p:hover {
+  color: #4da6ff;
+  transform: scale(1.1);
+}
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Welcome text */
-.welcome {
-  margin: 0;
-  font-size: 20px;
-  /* font-weight: bol; */
-  color: #ccc;
-}
-
-/* Logout button */
-.navbar button {
-  background-color: #2563eb;
-  font-weight: bold;
+.search {
+  padding: 6px 10px;
+  border-radius: 8px;
   border: none;
-  padding: 8px 14px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s;
+  height: 20px;
+  margin-right: 50px;
 }
 
-.navbar button:hover {
-  background-color: #1d4ed8;
+.profile img {
+  border-radius: 30%;
+  cursor: pointer;
+  margin-right: 40px;
+  width: 40px;
 }
-.navbar button:active
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #1f2d3d;
+  padding: 12px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.dropdown p {
+  padding: 8px;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center  ;
+  transition: (4s);
+}
+
+.dropdown p:hover {
+  transform: scale(1.4);
+  border-radius: 5px;
+}
+.dropdown h1
 {
-  background-color: #516aad;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+  justify-self: center;
+  align-self: center;
+}
+.logout {
+  color: red;
 }
