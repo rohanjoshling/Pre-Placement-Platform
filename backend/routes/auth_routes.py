@@ -20,7 +20,18 @@ def register(user: UserBase, db: Session = Depends(get_db)):
 @router.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):
     db_user = user_crud.get_user_by_email(db, email=user.email)
+
     if not db_user or not verify_password(user.password, db_user.password):
         raise HTTPException(status_code=400, detail="Invalid email or password")
+
     access_token = create_access_token(data={"sub": db_user.email})
-    return {"access_token": access_token, "token_type": "bearer"}
+
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user": {
+            "id": db_user.id,
+            "name": db_user.name,
+            "email": db_user.email
+        }
+    }

@@ -23,8 +23,9 @@ function Login() {
 
     loginUser(form)
       .then(res => {
-         localStorage.setItem("token", res.data.access_token);
-      localStorage.setItem("user", form.email);
+       localStorage.setItem("token", res.data.access_token);
+      localStorage.setItem("user_id", res.data.user.id);
+      localStorage.setItem("user_name", res.data.user.name);
       navigate("/dashboard")
       })
       .catch(err => {
