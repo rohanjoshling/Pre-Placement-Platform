@@ -2,8 +2,8 @@ from pydantic import BaseModel , EmailStr ,Field
 
 class UserBase(BaseModel):
     email : EmailStr
-    name : str = Field( min_length=3)
-    password : str = Field(min_length=6)
+    name : str = Field( min_length=3 , max_length=14)
+    password : str = Field(min_length=6 , max_length=10)
 
 class UserLogin(BaseModel):
     email: EmailStr
