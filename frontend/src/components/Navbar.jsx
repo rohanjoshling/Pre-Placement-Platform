@@ -8,11 +8,16 @@ function Navbar({ search, setSearch }) {
 
   const dropdownRef = useRef();
 
-  const user = localStorage.getItem("user") || "User";
+const user = localStorage.getItem("user_name") || "User";
 
   const logout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
+  const logout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user_id");
+  localStorage.removeItem("user_name"); 
+  navigate("/login");
+};
     navigate("/login");
   };
 
