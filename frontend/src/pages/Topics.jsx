@@ -17,7 +17,7 @@ function Topics() {
     "dynamic programming",
     "greedy",
     "Back-tracking",
-    "Seg"
+    "Segment Tree",
   ];
 
   return (
