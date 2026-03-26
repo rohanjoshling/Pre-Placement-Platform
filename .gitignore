@@ -60,3 +60,8 @@ logs/
 # 🧪 OPTIONAL (BUILD / CACHE)
 # ==============================
 *.cache
+
+# Python cache (ANYWHERE)
+__pycache__/
+*.py[cod]
+*$py.class
