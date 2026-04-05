@@ -5,12 +5,11 @@ import "../styles/dashboard.css";
 
 function DashBoard() {
   const [stats, setStats] = useState(null);
-  const [user, setUser] = useState(localStorage.getItem("user_name")); // ✅ FIX
+  const [user, setUser] = useState(localStorage.getItem("user_name"));
   const userId = localStorage.getItem("user_id");
 
   console.log("User ID:", userId);
 
-  // ✅ FETCH STATS
   useEffect(() => {
     if (!userId) return;
 
@@ -33,10 +32,8 @@ function DashBoard() {
       });
   }, [userId]);
 
-  // ✅ LOGIN CHECK
   if (!userId) return <p>Please login first</p>;
 
-  // ✅ LOADING STATE
   if (!stats) return <p>Loading...</p>;
 
   const total = stats.total > 0 ? stats.total : 1;
@@ -44,17 +41,13 @@ function DashBoard() {
   return (
     <>
       <Navbar />
-
       <div className="dashboard-container">
 
-        {/* 👤 USER CARD */}
         <div className="user-card">
           <img src="/logos/user.png" alt="user" />
           <h1>{user || "User"}</h1>
-          <p>Placement Preparation 🚀</p>
         </div>
 
-        {/* 📊 STATS */}
         <div className="stats-card">
           <h1>{stats.total}</h1>
           <p>Problems Solved</p>
@@ -66,7 +59,6 @@ function DashBoard() {
           </div>
         </div>
 
-        {/* 📈 PROGRESS BAR */}
         <div className="progress-bar">
           <div
             className="easy-bar"
@@ -82,7 +74,6 @@ function DashBoard() {
           />
         </div>
 
-        {/* 📚 TOPICS */}
         <div className="topics-card">
           <h3>Topic Progress</h3>
           {stats.topics &&
@@ -97,7 +88,6 @@ function DashBoard() {
             ))}
         </div>
 
-        {/* 🏢 COMPANIES */}
         <div className="companies-card">
           <h3>Company Progress</h3>
           {stats.companies &&

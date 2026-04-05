@@ -12,7 +12,6 @@
 
 /* 🧱 COMMON CARD STYLE */
 .user-card,
-.stats-card,
 .topics-card,
 .companies-card {
   background: white;
@@ -21,7 +20,25 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.25s ease;
 }
-
+.user-card
+{
+  height:  160px;
+  margin: 0  100px;
+}
+.stats-card {
+  background: white;
+  justify-self: center;
+  align-self: center;
+  padding: 60px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  border-radius: 18px;
+  text-align: center;
+  justify-self: center;   
+  align-self: center;  
+  width: 300px;         
+  margin: 0;            
+}
 /* ✨ HOVER EFFECT */
 .user-card:hover,
 .stats-card:hover,
