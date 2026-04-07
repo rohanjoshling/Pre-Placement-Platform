@@ -26,16 +26,11 @@ int main() {
     return 0;
 }`,
 
-  javascript: `function solve() {
-  
-}`,
+  javascript: `//Write your code here`,
 
-  typescript: `function solve(): void {
-  
-}`,
+  typescript: `//Write your code here`,
 
-  python: `def solve():
-    pass`,
+  python: `#Write your code here`,
 
   java: `class Solution {
     public static void main(String[] args) {
