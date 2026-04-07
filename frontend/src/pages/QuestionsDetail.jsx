@@ -111,7 +111,7 @@ function QuestionDetail() {
       .catch(() => alert("❌ Submission failed"));
   };
 
-  // ✅ RUN (MOCK)
+    // ✅ RUN (MOCK)
   const handleRun = () => {
     console.log(code);
     alert("🚀 Code executed (mock)");
@@ -173,6 +173,13 @@ function QuestionDetail() {
                 minimap: { enabled: false },
                 scrollBeyondLastLine: false,
                 automaticLayout: true,
+                quickSuggestions: false,
+                 quickSuggestions: false,
+                 suggestOnTriggerCharacters: false,
+                 acceptSuggestionOnEnter: "off",
+                tabCompletion: "off",
+                wordBasedSuggestions: "off",
+                parameterHints: { enabled: false },
               }}
             />
           </div>

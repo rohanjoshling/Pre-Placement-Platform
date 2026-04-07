@@ -1,5 +1,3 @@
-// src/constants/editorTemplates.js
-
 export const LANGUAGES = [
   { label: "C++", value: "cpp" },
   { label: "JavaScript", value: "javascript" },
@@ -22,8 +20,7 @@ export const TEMPLATES = {
 using namespace std;
 
 int main() {
-    // Write your code here
-    return 0;
+
 }`,
 
   javascript: `//Write your code here`,
@@ -34,6 +31,7 @@ int main() {
 
   java: `class Solution {
     public static void main(String[] args) {
+            // Write your code here
     }
 }`,
 
