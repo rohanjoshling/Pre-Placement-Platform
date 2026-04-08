@@ -202,6 +202,13 @@ python -m venv venv
 venv\Scripts\activate   # Windows Users
 . venv\bin\activate     # Mac Users 
 ```
+## Run these commands inside frontend directory
+```
+npm install
+```
+```
+npm install @monaco-editor/react
+```
 
 ### 3. Install Dependencies
 
@@ -220,9 +227,13 @@ SECRET_KEY=your_secret_key
 ```
 
 ### 5. Run Backend Server
-
+## In backend directory
 ```
 uvicorn main:app --reload
+```
+## In frontend directory
+```
+npm run dev
 ```
 
 ---
