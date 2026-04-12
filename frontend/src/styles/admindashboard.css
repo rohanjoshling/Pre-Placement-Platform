@@ -1,22 +1,27 @@
     /* PAGE */
     .admin-container {
     padding: 30px 50px;
-    background: linear-gradient(to bottom right, #f8fafc, #eef2ff);
+      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
     min-height: 100vh;
     font-family: "Inter", sans-serif;
     }
 
     /* HEADER */
     .admin-title {
-    font-size: 28px;
+    font-size: 54px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #111827;
+    color: #f3f5f8;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: rgb(0, 0, 46);
+    margin-bottom: 50px;
     }
 
     /* SECTION CARD */
     .admin-section {
-    background: hsla(0, 0%, 88%, 0.9);
+    background:hsl(0, 0%, 94%);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 16px;
@@ -25,7 +30,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     transition: 0.3s ease;
     }
-
+    
     .admin-section:hover {
     transform: translateY(-4px);
     }
