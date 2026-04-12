@@ -1,71 +1,92 @@
-.settings-container {
-  padding: 30px 60px;
+/* PAGE LAYOUT */
+.settings-page {
+  display: flex;
+  min-height: calc(100vh - 60px);
   background: #f8fafc;
-  min-height: 100vh;
 }
 
-.settings-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
+/* SIDEBAR */
+.settings-sidebar {
+  width: 240px;
+  flex-shrink: 0;
 }
 
-.settings-card {
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  margin-bottom: 25px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+/* CONTENT AREA */
+.settings-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
 }
 
-.settings-card h2 {
-  margin-bottom: 15px;
-}
-
-.settings-card input {
+/* CENTERED CONTAINER */
+.settings-inner {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  max-width: 650px;
+}
+
+/* CARD */
+.settings-card {
+  width: 100%;
+  background: white;
+  padding: 25px 30px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,10);
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+}
+
+/* TITLE */
+.settings-card h1 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* INPUT */
+.settings-card input {
+  width: 90%;
+  padding: 12px 14px;
+  margin-bottom: 25px;
+  border: solid rgb(186, 180, 180) 1px;
+  border-radius: 10px;;
   outline: none;
+  transition: 0.2s;
 }
 
 .settings-card input:focus {
   border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.1);
 }
 
-/* NORMAL BUTTON */
+/* BUTTON */
 .settings-card button {
-  padding: 10px 16px;
+  padding: 15px 25px;
   background: #2563eb;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
 }
 
 .settings-card button:hover {
   background: #1d4ed8;
 }
 
-/* DANGER SECTION */
+/* DANGER */
 .settings-card.danger {
   border: 1px solid #fee2e2;
 }
 
-/* LOGOUT */
-.logout-btn {
-  width: 100%;
-  margin-bottom: 10px;
-  background: #f59e0b;
-}
-
-.logout-btn:hover {
-  background: #d97706;
-}
-
-/* DELETE */
+/* DELETE BUTTON */
 .delete-btn {
   width: 100%;
   background: #ef4444;
