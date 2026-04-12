@@ -11,3 +11,17 @@ export const loginAdmin = (data) => API.post("/admin/login", data);
 export const getQuestionById = (id) => API.get(`/questions/${id}`);
 export const getQuestions = (id) => API.get(`/questions`);
 export const getQuestionsByCompany = (company) => API.get(`/questions/company/${company}`);
+export const updateProfile = (data) =>
+  API.put("/auth/update-profile", null, {
+    params: data
+  });
+
+export const changePassword = (data) =>
+  API.put("/auth/change-password", null, {
+    params: data
+  });
+
+export const deleteAccount = (email) =>
+  API.delete("/auth/delete-account", {
+    params: { email }
+  });

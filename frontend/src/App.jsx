@@ -6,6 +6,7 @@ import QuestionDetail from "./pages/QuestionsDetail";
 import Companies from "./pages/Companies"
 import AdminDashboard from "./pages/AdminDashboard";
 import DashBoard from "./pages/DashBoard";
+import Settings  from "./pages/Settings";
 import Topics from "./pages/Topics";
 import TopicQuestions from "./pages/TopicQuestions";
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/questions/company/:company" element={<Questions />} />
         <Route path="/questions/:id" element={<QuestionDetail />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );
