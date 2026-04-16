@@ -1,24 +1,24 @@
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/topics.css";
 
 function Topics() {
   const navigate = useNavigate();
 
-  const topics = [
-    "array",
-    "two pointers",
-    "sliding window",
-    "linked list",
-    "stack",
-    "queue",
-    "tree",
-    "graph",
-    "dynamic programming",
-    "greedy",
-    "Back-tracking",
-    "Segment Tree"
-  ];
+  const [topics, setTopics] = useState([]);
+  
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/topics")
+      .then((res) => {
+        setTopics(res.data);
+      })
+      .catch((err) => {
+        console.log("Error fetching topics:", err);
+      });
+  }, []);
 
   return (
     <>
@@ -28,16 +28,18 @@ function Topics() {
         <h1>Topics</h1>
 
         <div className="topics-grid">
-          {topics.map((topic) => (
+          {topics.map((t) => (
             <div
-              key={topic}
+              key={t.name}
               className="topic-card"
-              onClick={() => navigate(`/topics/${topic}`)}
+              onClick={() => navigate(`/topics/${t.name}`)}
             >
-              {topic.toUpperCase()}
+              {t.name.toUpperCase()}
             </div>
           ))}
         </div>
+
+        {topics.length === 0 && <p>No topics found</p>}
       </div>
     </>
   );
