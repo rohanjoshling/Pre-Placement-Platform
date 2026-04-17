@@ -311,7 +311,15 @@ uvicorn main:app --reload
 
 ```
 cd frontend
+
 npm install
+npm install axios
+npm install @monaco-editor/react
+npm install react-hot-toast
+npm install recharts
+npm install react-calendar-heatmap
+npm install date-fns
+
 npm run dev
 ```
 
