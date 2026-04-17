@@ -1,9 +1,11 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from models.attempt import Attempt
+from database.mongDB import questions_collection
 from database.database import get_db
 from schemas.attempt_schema import AttemptCreate
 from CRUD.attempts_crud import create_attempt, get_user_attempts, get_user_stats, get_all_attempts
+from bson import ObjectId
 
 router = APIRouter()
 
@@ -15,10 +17,34 @@ def add_attempt(attempt: AttemptCreate, db: Session = Depends(get_db)):
 @router.get("/attempts")
 def get_all_attempts_route(db : Session = Depends(get_db)):
     return get_all_attempts(db)
+
+
 # GET USER ATTEMPTS
-@router.get("/attempts/{user_id}")
-def get_attempts(user_id: int, db: Session = Depends(get_db)):
-    return get_user_attempts(db, user_id)
+@router.get("/attempts/user/{user_id}")
+def get_user_attempts_route(user_id: int, db: Session = Depends(get_db)):
+    attempts = db.query(Attempt).filter(
+        Attempt.user_id == user_id,
+        Attempt.status == "solved"
+    ).all()
+
+    result = []
+
+    for a in attempts:
+        question = questions_collection.find_one(
+            {"_id": ObjectId(a.question_id)},
+            {"title": 1, "company": 1, "difficulty": 1}
+        )
+
+        result.append({
+            "id": str(a.id),
+            "question_id": a.question_id,
+            "title": question.get("title") if question else "Unknown",
+            "company": question.get("company", ["Unknown"])[0] if question else "Unknown",
+            "difficulty": a.difficulty,
+            "date": a.created_at
+        })
+
+    return result
 
 
 # GET USER STATS 🔥
