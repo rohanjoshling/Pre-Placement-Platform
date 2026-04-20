@@ -56,7 +56,13 @@ function Register() {
 
   return (
     <div className="page-center">
+
       <div className="auth-card">
+
+        {/* ── CodeStride Brand Logo ── */}
+        <div className="brand-logo">
+          <img src="/logos/codestride_logo.png" alt="CodeStride" className="brand-logo-img" />
+        </div>
 
        <div className="role-switch">
           <button
