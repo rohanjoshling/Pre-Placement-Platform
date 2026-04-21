@@ -95,20 +95,18 @@ function Login() {
           </button>
         </div>
 
-        <h1>{role === "admin" ? "Admin Login" : "User Login"}</h1>
-
         <form onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter your email address"
             onChange={handleChange}
           />
 
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Enter your Password"
             onChange={handleChange}
           />
 

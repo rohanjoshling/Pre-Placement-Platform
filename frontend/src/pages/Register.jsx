@@ -80,27 +80,25 @@ function Register() {
           </button>
         </div>
 
-       <h1>{role === "admin" ? " For Admin" : " For  User"}</h1>
-
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
-            placeholder="Full Name"
+            placeholder="Enter your Full Name"
             onChange={handleChange}
           />
 
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter the valid Email Address"
             onChange={handleChange}
           />
 
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Enter the Password"
             onChange={handleChange}
           />
 
