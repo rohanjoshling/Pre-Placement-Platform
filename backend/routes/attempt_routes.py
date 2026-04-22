@@ -60,13 +60,3 @@ def get_heatmap_data(user_id: int, db: Session = Depends(get_db)):
         heatmap_data[date_str] = heatmap_data.get(date_str, 0) + 1
     return heatmap_data
 
-#RUN 
-@router.post("/run")
-def run_code(data : dict):
-    code = data.get("code")
-    language = data.get("language")
-    input_data = data.get("input")
-
-    return{
-            "output": f"Input:\n{input_data}\n\nOutput:\nDemo Result"
-    }
