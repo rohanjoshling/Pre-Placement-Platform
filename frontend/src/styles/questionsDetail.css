@@ -168,3 +168,10 @@ textarea {
   background: #e5e7eb;
   border-radius: 6px;
 }
+
+.section{
+  background: #e5e7eb;
+  border-radius: px;
+  margin-left: 6px;
+  border:10px;
+}

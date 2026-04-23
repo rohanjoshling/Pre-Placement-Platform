@@ -45,6 +45,8 @@ const user = localStorage.getItem("user_name") || "User";
           <p onClick={() => navigate("/companies")}>Companies</p>
           <p onClick={() => navigate("/topics")}>Topics</p>
           <p onClick={() => navigate("/practice")}>Practice</p>
+          <p onClick={() => navigate("/Leaderboard")}>Leaderboard</p>
+
         </div>
       </div>
 
