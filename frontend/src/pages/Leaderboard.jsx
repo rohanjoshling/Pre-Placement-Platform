@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/leaderboard.css";
@@ -13,6 +14,7 @@ function Leaderboard() {
 
   return (
     <div className="dashboard-root">
+      <Navbar />
       <div className="dashboard-grid">
 
         <div className="card leaderboard-card">
@@ -30,7 +32,7 @@ function Leaderboard() {
             <tbody>
               {data.map((user, index) => (
                 <tr key={index} className={index < 3 ? "top-row" : ""}>
-                  <td className="rank-cell">
+                  <td className="rank-cell" >
                     {index === 0 && "1"}
                     {index === 1 && "2"}
                     {index === 2 && "3"}
