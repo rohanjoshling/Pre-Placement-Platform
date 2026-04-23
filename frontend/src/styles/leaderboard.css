@@ -1,0 +1,71 @@
+/* Use same root + card styling already defined */
+
+.leaderboard-card {
+  grid-column: 1 / -1;
+}
+
+/* Title */
+.leaderboard-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header */
+.leaderboard-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Rows */
+.leaderboard-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+/* Hover like cards */
+.leaderboard-table tr:hover {
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+/* Rank */
+.rank-cell {
+  font-weight: 700;
+  color: #6366f1;
+}
+
+/* Name */
+.name-cell {
+  font-weight: 600;
+}
+
+/* Score badge (matches badge system) */
+.score-badge {
+  padding: 6px 34px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.1);
+  color: #6366f1;
+  font-weight: 600;
+}
+
+/* Top 3 highlight */
+.top-row {
+  background: rgba(99,102,241,0.08);
+}
+
+/* Smooth row feel */
+.leaderboard-table tr {
+  transition: all 0.2s ease;
+}

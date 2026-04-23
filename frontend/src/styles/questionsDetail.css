@@ -355,5 +355,11 @@ textarea {
   color: #e2e8f0;
   padding: 8px;
   border-radius: 6px;
-  overflow-x: auto;
+}
+
+.section{
+  background: #e5e7eb;
+  border-radius: px;
+  margin-left: 6px;
+  border:10px;
 }

@@ -12,6 +12,7 @@ import Topics from "./pages/Topics";
 import MyAttempts from "./pages/myattempts"
 import Profile from "./pages/Profile";
 import TopicQuestions from "./pages/TopicQuestions";
+import Leaderboard from "./pages/Leaderboard";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
         <Route path="/questions/:id" element={<QuestionDetail />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </BrowserRouter>
   );
