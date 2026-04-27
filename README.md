@@ -133,7 +133,6 @@ We integrated Judge0 using **RapidAPI**:
 
 User Code → FastAPI → Judge0 (RapidAPI) → Result → Backend → Frontend
 
-
 ---
 
 ### 🔹 Why RapidAPI?
@@ -220,14 +219,13 @@ pip install -r requirements.txt
 
 Create `.env`:
 
-DATABASE_URL=postgresql://user:password@localhost/dbname
-MONGO_URL=mongodb://localhost:27017
-SECRET_KEY=your_secret_key
+DATABASE_URL=postgresql://user:password@localhost/dbname , 
+MONGO_URL=mongodb://localhost:27017 , 
+SECRET_KEY=your_secret_key , 
 JUDGE0_API_KEY=your_rapidapi_key
 
 
 Run backend:
-
 
 ---
 
