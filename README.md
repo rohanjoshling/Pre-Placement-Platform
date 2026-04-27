@@ -133,7 +133,6 @@ We integrated Judge0 using **RapidAPI**:
 
 User Code → FastAPI → Judge0 (RapidAPI) → Result → Backend → Frontend
 
-
 ---
 
 ### 🔹 Why RapidAPI?
